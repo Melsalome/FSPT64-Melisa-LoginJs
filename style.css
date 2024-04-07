@@ -1,0 +1,174 @@
+:root{
+    --primary-color: #EDC75E;
+    --secondary-color:#f4e5d1;
+    --third-color:#FF6628;
+    --width-inputs-button:300px;
+    --height-inputs-button:50px;
+    --extra-color: rgb(68, 32, 212);
+}
+
+.noto-sans{
+    font-family: "Noto Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-variation-settings:
+      "wdth" 100;
+  }
+
+  *{
+    font-family: "Noto Sans", sans-serif;
+  }
+
+body{
+    /* background-image: url(imagen/Kindergarten-removebg-preview.png); */
+    background-color: var(--secondary-color);
+    background-size: auto;
+    background-repeat: no-repeat;
+    background-position: bottom right;
+    /* background-image: url(imagen/Diseño_sin_título-removebg-preview.png); */
+}
+
+div.circle{
+    border-radius: 500%;
+    height: 80px;
+    width: 80px;
+    /* background-color: var(--third-color); */
+    margin-left: 730px;
+    margin-top: 23px;
+    z-index: 1;
+    position: absolute;
+    cursor: pointer;
+   
+}
+div.container{
+    background-color: var(--primary-color);
+    width: 525px;
+    height: 615px;
+    border-radius: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 0;
+    margin-top: 67px;
+    margin-left: 30px;
+}
+   
+
+
+a{
+    color: #163253;
+    
+}
+
+form{
+    justify-items: center;
+    height: 675px;
+    display: flex;
+    justify-content: center;
+}
+
+button{
+    background-color: var(--third-color);
+    font-weight: 700;
+    border-radius: 20px;
+    width: var(--width-inputs-button);
+    height: var(--height-inputs-button);
+    border: none;
+
+}
+
+.footpage{
+    display:flex;
+    flex-direction: column;
+    margin-top: 25px;
+    height: 180px;
+    justify-content: space-around;
+}
+
+h1{
+    font-size: 23px;
+    font-weight: 400;
+
+}
+
+h2{
+    font-size: 12px;
+    margin: 3px;
+}
+
+h3,h4{
+    font-size: 35px;
+}
+
+span{
+    align-self: center;
+}
+
+.form-control{
+    background-color: var(--secondary-color);
+    border-radius: 20px;
+    border-style: dashed;
+    border: none;
+    width: 300px;
+    height: 50px;
+    margin-top: 28px;
+}
+
+
+div.header{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 108px;
+    margin-top:35px;
+ 
+}
+
+div.password{
+    margin-bottom: 20px;
+}
+
+.orange{
+    color: var(--third-color);
+}
+
+.yellow{
+    color: var(--primary-color);
+}
+
+.blue{
+    color: #5173B3;
+}
+
+p{
+    margin:0;
+}
+
+.title{
+    font-size: 40px;
+}
+
+.secondtitle{
+    font-size: 22px;
+    display: flex;
+    justify-content: center;
+}
+/* .centraltext{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 40px;
+} */
+
+.btn{
+    font-weight:bolder;
+}
+
+.extracolor {
+    background-color: var(--extra-color);
+}
+
+.thirdcolor{
+    background-color: var(--third-color);
+}
