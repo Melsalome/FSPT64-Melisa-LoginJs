@@ -1,13 +1,13 @@
 
-const _passwordInput = document.getElementById("password");
-const passwordIcon = document.querySelector('[data-fn="revealedClick"]');
+const passwordInput = document.querySelector("#password");
+const passwordIcon = document.querySelector(".password-toggle-icon i");
 // ESTE ES EL ESTADO DEL PASSWORD
 let isPasswordRevealed = false; 
 //
-const _ojoAbierto = "fa-eye-slash";
-const _ojoCerrado = "fa-eye";
-const _contraseña = "password";
-const _texto = "text";
+const ojoAbierto = "fa-eye-slash";
+const ojoCerrado = "fa-eye";
+const contraseña = "password";
+const texto = "text";
 
 const buttons = document.querySelectorAll(".btn");
 const circle = document.querySelector(".circle");
@@ -15,40 +15,43 @@ let isCircleOrange = true;
 let buttonSingUpClass =  buttons[0].classList;
 let buttonNewAccountClass = buttons[1].classList;
 
- passwordIcon.addEventListener("click", function () {
+const passwordRevelation = () => {
     if(isPasswordRevealed === false) {
-      _passwordIconAction(_texto,_ojoCerrado,_ojoAbierto);
+      passwordIconAction(texto,ojoCerrado,ojoAbierto);
     isPasswordRevealed = true;
     } else {
-        _passwordIconAction(_contraseña,_ojoAbierto,_ojoCerrado);
+        passwordIconAction(contraseña,ojoAbierto,ojoCerrado);
     isPasswordRevealed = false;
     }
-})
+};
 
-const _passwordIconAction = (text, textoRemove, textoAdd) => {
-    _passwordInput.type = text;
-    _passwordIcon.classList.remove(textoRemove);
-    _passwordIcon.classList.add(textoAdd); 
+const passwordIconAction = (texto, textoRemove, textoAdd) => {
+    passwordInput.type = texto;
+    passwordIcon.classList.remove(textoRemove);
+    passwordIcon.classList.add(textoAdd); 
 }
 
 
-circle.addEventListener("click", function (){
+const circleColorAction = () => {
     if(isCircleOrange){
-        circle.classList.remove("thirdcolor");
-        circle.classList.add("extracolor");
+        circleFirstAction();
         buttonSingUpClass.value = "btn extracolor";
         buttonNewAccountClass.value = "btn extracolor";
         isCircleOrange = false;
     } else {
-        _circleAction();
+        circleSecondAction();
         buttonSingUpClass.value = "btn";
         buttonNewAccountClass.value = "btn";
         isCircleOrange = true;
     }
-})
+};
 
-const _circleAction = () => {
+const circleSecondAction = () => {
     circle.classList.remove("extracolor");
     circle.classList.add("thirdcolor");
 }
 
+const circleFirstAction = () => {
+    circle.classList.remove("thirdcolor");
+    circle.classList.add("extracolor");
+}
